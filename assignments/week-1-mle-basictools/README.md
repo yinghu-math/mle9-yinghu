@@ -142,7 +142,7 @@ Enter the following commands in terminal to setup your environment. When prompte
   7. And then add your own remote as the new `origin`, **which you will probably need to make manually if you plan on pushing it back to Github**. See here.
   
   ```console
-  git remote add origin https://github.com/author/ForkName
+  git remote add origin git@github.com:username/repository.git
   ```
 
 
@@ -157,15 +157,15 @@ Enter the following commands in terminal to setup your environment. When prompte
   ```console
   git fetch upstream
 
-  git checkout master
+  git checkout main
   
-  git rebase upstream/master
+  git rebase upstream/main
   ```
      
   10. After this, you may need to force push if this is the first time rebasing
   
   ```console
-  git push -f origin master
+  git push -f origin main
   ```
      
      
