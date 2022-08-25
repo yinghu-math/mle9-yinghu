@@ -131,3 +131,4 @@ dmypy.json
 # mac
 .DS_Store
 
+secrets_reddit.py
