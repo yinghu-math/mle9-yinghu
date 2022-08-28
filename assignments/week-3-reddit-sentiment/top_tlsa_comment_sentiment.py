@@ -1,5 +1,5 @@
 
-import secrets
+import secrets_reddit
 import random
 
 from typing import Dict, List
@@ -21,12 +21,12 @@ def get_subreddit(display_name:str) -> Subreddit:
         Subreddit: [description]
     """
     reddit = Reddit(
-        client_id=secrets.REDDIT_API_CLIENT_ID,        
-        client_secret=secrets.REDDIT_API_CLIENT_SECRET,
-        user_agent=secrets.REDDIT_API_USER_AGENT
+        client_id=secrets_reddit.REDDIT_API_CLIENT_ID,        
+        client_secret=secrets_reddit.REDDIT_API_CLIENT_SECRET,
+        user_agent=secrets_reddit.REDDIT_API_USER_AGENT
         )
     
-    subreddit = # YOUR CODE HERE
+    subreddit = reddit.subreddit(display_name)
     return subreddit
 
 def get_comments(subreddit:Subreddit, limit:int=3) -> List[str]:
@@ -56,16 +56,17 @@ def run_sentiment_analysis(comment:str) -> Dict:
     Returns:
         str: Sentiment analysis result
     """
-    sentiment_model = # YOUR CODE HERE
+    sentiment_model = pipeline("sentiment-analysis")
     sentiment = sentiment_model(comment)
     return sentiment[0]
 
 
 if __name__ == '__main__':
-    subreddit = # YOUR CODE HERE
-    comments = get_comments(subreddit)
-    comment = # YOUR CODE HERE
+    subreddit = get_subreddit("math")
+    comments = get_comments(subreddit, limit=10)   ## top comments
+    comment = random.choice(comments)
     sentiment = run_sentiment_analysis(comment)
     
+    print(len(comments))
     print(f'The comment: {comment}')
     print(f'Predicted Label is {sentiment["label"]} and the score is {sentiment["score"]:.3f}')
