@@ -1,7 +1,11 @@
  
 **Algorithm Understanding Qeusiton:** How does the Gradient-Boosted Tree Algorithm work in Classification? How does Gradient Boost differ from AdaBoost and Logistic Regression?
 
-**Ans:**
+**Ans:** Gradient Boost and AdaBoost are two examples of ensemble methods that combine several weaker predictors into a stronger one. In both algorithms, weaker predictors are produced sequentially. The difference between the two methods lies in how they produce and combine these weaker models. 
+
+AdaBoost trains the new model by increasing weights to the data points that were incorrectly predicted by the previous model. On the other hand, in the Gradient Boosting algorithm, one trains the next model on the errors made by the previous predictor.  
+
+I saw how gradient boost being used in regression tasks before. For using the Gradient-Boosted Tree Algorithm in a classification task, I think one would first train a base model on the entire train data as the starting point. Then to get the next model, one would collect the data points that were misclassified by the previous model and train a model just on these data. **But I am not sure how to aggregate these models together in this case. Do you have any references I can look at?**
 
 
 **Interview Readiness Qeusiton:** What is a Delta Lake and how does it offer a solution to building reliable data pipelines?
