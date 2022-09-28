@@ -14,7 +14,9 @@ For Logistic Regresion, the training complexity is $O(n\times d)$ where $n$ and 
 
 **Interview Readiness:** Explain feature importance for the Random Forest algorithm? When examining feature importance, what is Gini impurity or information gain?
 
-Random Forest is an ensemble of decision trees (with bagging). In the decision tree algorithm, at each iteration, the program greedily looks for a feature and a threshold to minimize the Gini impurity of the children nodes. So choosing a good selection of features are essential. 
+Random Forest is an ensemble of decision trees (with bagging). In the decision tree algorithm, at each iteration, the program greedily looks for a feature and a threshold to minimize the Gini impurity of the children nodes. 
+
+Given a feature, one can look at all nodes that use that feature and compute the weighted average of the reduction of Gini impurity at these nodes. This will give a measure of the importance of each feature. 
 
 
 **Interview Readiness:** SHAP (SHapley Additive exPlanations) is a game theoretic approach to explain the output of any machine learning model, what is it and how does it work?
