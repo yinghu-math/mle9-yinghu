@@ -12,7 +12,7 @@ On the new platform, Docker can create a container according to the contents ins
 
 **Q2** Please explain what is the difference from a Container vs a Virtual Machine?
 
-The virtual machine contains an entire operating system, and it virtualizes the file systems, the hardware etc. Virtual machines are stand-alone computers running on top of the host OS. You can run any application on a virtual machine. It's powerful and versatile but slow. 
+The virtual machine contains an entire operating system, and it virtualizes the file systems, the hardware etc. Virtual machines are stand-alone computers running on top of the host OS. You can run any application, like Docker, on a virtual machine. It's powerful and versatile but slow. 
 
 The container itself doesn't contain an operating system; rather, it is more like a process running on top of the host OS. One container usually only contains one application or service. As a result, it's light and fast to boot up. 
 
