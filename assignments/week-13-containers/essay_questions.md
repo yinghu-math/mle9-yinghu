@@ -1,6 +1,6 @@
-Link to the stock-predictor repo: 
+Link to the stock-predictor repo - container branch: 
 
-https://github.com/yinghu-math/stock-predictor
+https://github.com/yinghu-math/stock-predictor/tree/container
 
 
 **Q1** What does it mean to create a Docker image and why do we use Docker images?
