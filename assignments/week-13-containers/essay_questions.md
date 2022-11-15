@@ -5,7 +5,7 @@ https://github.com/yinghu-math/stock-predictor/tree/container
 
 **Q1** What does it mean to create a Docker image and why do we use Docker images?
 
-Different machines have different architectures, operating systems, etc., so one application that runs on one machine may not run on another machine out-of-box. Setting up the environment for every machine and every application is a huge pain.  
+Different machines have different architectures, operating systems, etc., so one application that runs on one machine may not run on another machine out-of-box. Setting up the environment for every machine and every application is a huge pain. This issue becomes even more complicated when the application consists of many different components, such as server app, database, etc, and each of them has different requirements on OS and packages. 
 
 To solve this problem, one can build a docker image that contains all the necessary contexts for the application and share the image instead of just the application. 
 On the new platform, Docker can create a container according to the contents inside the image, within which the application can run properly.  
